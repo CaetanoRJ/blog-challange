@@ -1,0 +1,27 @@
+<%- include('partials/header'); -%>
+
+<h1>Compose</h1>
+
+<form action="/compose" method="post">
+  <label for="">Title</label>
+
+  <!--   formcontrol para que seja possivel usar no backend -->
+  <div class="input-group input-group-sm mb-3">
+    <input name="inputTitle" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+      id="labelTest" />
+  </div>
+
+  <!--   <input type="text" name="composeInputText"> -->
+  <label for="">Post</label>
+  <!--   <input type="text" class="form-control" aria-label="with textarea" aria-describedby="inputGroup-sizing-lg"> -->
+  <div class="input-group">
+    <textarea name="textArea" class="form-control" aria-label="With textarea" id="labelTest1"></textarea>
+  </div>
+  <!--  ou no html puro <textarea name="" id="" cols="30" rows="10"></textarea> -->
+
+  <button type="submit" class="btn btn-primary" id="btn-compose">
+    Publish
+  </button>
+</form>
+
+<%- include('partials/footer'); -%>

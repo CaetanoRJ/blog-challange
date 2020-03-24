@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<p><%= startingContent %></p>
+
+<!-- <%  for (let i = 0; i < postsOfFrontEnd.length; i++) {%> -->
+<!-- <h1> <%= postsOfFrontEnd[i].title %> </h1> -->
+<!-- <p> <%= postsOfFrontEnd[i].text %></p> -->
+<!-- <% } %> -->
+
+<!-- ouuu com foreach -->
+<% postsOfFrontEnd.forEach(elementosDoArray => { %>
+<h1> <%= elementosDoArray.title %> </h1>
+<p>
+    <%= elementosDoArray.text.substring(0,150) + " ..." %> <a href="/posts/<%=elementosDoArray.title%>">Read More</a>
+</p>
+
+<% }); %>
+
+
+<%- include('partials/footer'); -%>
